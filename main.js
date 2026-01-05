@@ -17,6 +17,7 @@ const hasDigit = /[0-9]/.test(password);
 const hasSymbol = '/[!@#$%^&*()_\-+='
 
 
+"{};:'\",.<>/?\\|]/".test(password);
 const longEnough = password.length >= 8;
 
 if (!(hasUpper && hasDigit && hasSymbol && longEnough)) {
@@ -25,4 +26,6 @@ document.getElementById("result").innerHTML = message;
 return;
 }
 
+message = "Viss ir ievadīts pareizi";
+document.getElementById("result").innerHTML = message;
 });
